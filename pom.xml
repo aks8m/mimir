@@ -1,9 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>cloud.sills</groupId>
-    <artifactId>mimir</artifactId>
+
+    <groupId>cloud.sills.mimir</groupId>
+    <artifactId>app</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <properties>
         <!--    Java Project Properties    -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -12,6 +14,7 @@
         <!--    JavaFX Properties    -->
         <javafx-controls.version>21.0.2</javafx-controls.version>
         <javafx-maven-plugin.version>0.0.8</javafx-maven-plugin.version>
+        <javafx-fxml.version>21.0.2</javafx-fxml.version>
         <!--    Maven Lifecycle Plugins    -->
         <maven-clean-plugin.version>3.3.2</maven-clean-plugin.version>
         <maven-site-plugin.version>3.12.1</maven-site-plugin.version>
@@ -24,13 +27,20 @@
         <maven-deploy-plugin.version>3.1.1</maven-deploy-plugin.version>
         <maven-failsafe-plugin.version>3.2.5</maven-failsafe-plugin.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
             <version>${javafx-controls.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>${javafx-fxml.version}</version>
+        </dependency>
     </dependencies>
+
     <build>
         <pluginManagement>
             <plugins>
@@ -98,7 +108,7 @@
                     <execution>
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>cloud.sills.App</mainClass>
+                            <mainClass>cloud.sills.mimir.app/cloud.sills.mimir.App</mainClass>
                         </configuration>
                     </execution>
                 </executions>

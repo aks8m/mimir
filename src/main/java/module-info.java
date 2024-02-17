@@ -1,4 +1,7 @@
-module cloud.sills.mimir {
+module cloud.sills.mimir.app {
     requires javafx.controls;
-    exports cloud.sills;
+    requires javafx.fxml;
+    exports cloud.sills.mimir;
+
+    opens cloud.sills.mimir to javafx.fxml;
 }
